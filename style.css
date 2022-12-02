@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Jost', sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.ogechi-containers {
+  width: 100%;
+  height: 25vh;
+  background-color: white;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(55,63,104) none repeat scroll 0% 0%;
+    border-radius: 10px;
+    padding: 20px;
+}
+.ogechi-search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 1.5rem;
+  width: 95%;
+}
+.ogechi-containers h4{
+  padding-bottom: 20px;
+}
+.ogechi-search input{
+  border: none;
+  background-color: rgb(233, 233, 233);
+  width: 100% !important;
+  padding: 4px;
+}
+.ogechi-search input:focus {
+  outline: none;
+}
+h3{
+    font-size: 18px;
+    line-height: 26px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: -.25px;
+}
+
+.contact__button{
+    outline: none;
+    display: inline;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border: none;
+}
+
+
+.contact__item{
+        display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 8px 16px;
+}
+.contact__list{
+    margin-bottom: 5.1rem;
+    margin-top: 27vh;
+    width: 100%;
+}
+.contact_details{
+        flex: 1 1 auto;
+    min-width: 0px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.contact_details h4{
+    word-wrap: break-word;
+}
+.ogechi-icon{
+        min-width: 56px;
+    flex-shrink: 0;
+}
+.contact__buttons{
+        position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.item-animation {
+    animation: slide-up 0.3s ease-in-out;
+}
+
+@keyframes slide-up {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.modal__content{
+    background: rgb(255,255,255) none repeat scroll 0% 0%;   
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 10px;
+    padding: 42px;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -.333333px;
+    color: rgb(58,67,116);
+    padding-bottom: 26px;
+    padding-top: 16px;
+}
+
+/* add contact */
+/* add contact */
+.ogechi-add-contact{
+  width: 100%;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.ogechi-sub-contact{
+  width: 100%;
+  height: 100%;
+}
+.ogechi-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #67d7cc;
+  color: white;
+  font-size: 20px;
+  height: 8vh;
+  padding: 10px 50px;
+}
+.ogechi-form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 30px;
+}
+.ogechi-circle{
+	font-size: 60px;
+	padding: 20px;
+	height: 100px;
+	width: 100px;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+/* The Modal (background) */
+.ogechi-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2000; /* Sit on top */
+  left: 0;
+  top: 0;
+  padding-top: 35px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(255, 255, 255); /* Fallback color */
+  /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+}
+.ogechi-modals{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.ogechi-back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ogechi-back p{
+  font-size: 12px;
+  padding-left: 6px;
+}
+.ogechi-fill{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.ogechi-fill form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 60px;
+}
+.ogechi-fill form input{
+	width: 90%;
+	margin-bottom: 20px;
+	border: none;
+	padding: 10px;
+	outline: none;
+	box-shadow: 2px 2px 50px rgba(204, 204, 204, 0.1);
+}
+.ogechi-fill form input::placeholder{
+	color: rgba(0, 0, 0, 0.2);
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type=number]{
+	-moz-appearance: textfield;
+}
+/* add contact */
+/* add contact */
+.modal input{
+    width: 100%;
+    padding: 13px 24px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: rgb(58,67,116);
+    background: rgb(247,248,253) none repeat scroll 0% 0%;   
+    border-radius: 5px;
+    border: medium none;
+}
+
+
+.modal__footer{
+    display: flex;
+    align-self: flex-end;
+    gap: 16px;
+}
+
+.modal__button_cancel{
+    color: rgb(242, 244, 254);
+    background: rgb(101,110,163) none repeat scroll 0% 0%;   
+}
+
+/* speed dial */
+/* speed dial */
+.dials{
+        z-index: 1050;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    pointer-events: none;
+    flex-direction: column-reverse;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+}
+.dial{
+        display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    min-height: 36px;
+    border-radius: 50%;
+    padding: 0px;
+    min-width: 0px;
+    width: 56px;
+    height: 56px;
+    z-index: 1050;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 118, 210);
+    pointer-events: auto;
+}
+/* speed dial */
+/* speed dial */
+
+/* list item */
+/* list item */
+.css-154ogbs{
+        position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    user-select: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(189, 189, 189);;
+}
+/* list item */
+/* list item */

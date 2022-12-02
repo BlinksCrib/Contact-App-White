@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking of font awesome -->
+    <!-- linking of font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- linking of font awesome -->
+    <!-- linking of font awesome -->
+    <link rel="stylesheet" href="./style.css">
+    <title>contact App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="ogechi-containers" id='outs'>
+                    <h4><span id="contacts">0</span> Contacts</h4>
+            <div class='ogechi-search' >
+                <i class="fa-solid fa-magnifying-glass" class='delete-icon'></i>
+                <input type='text' name="search" id="search-input" placeholder='Type to search by name or number...'
+                    id='mySearch' data-search />
+            </div>
+        </div>
+
+        <div class="contact__list" id="contact-list">
+
+        </div>
+
+        <!-- Adding a modal to add contact -->
+        <div class="ogechi-modal" id="add-contact-modal">
+            <div class="ogechi-modals">
+                <div class='ogechi-add-contact'>
+                    <div class='ogechi-sub-contact'>
+                        <div class='ogechi-nav'>
+                            <div class='ogechi-back' id="cancel-button">
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <p>New Contact</p>
+                            </div>
+                            <div class='ogechi-tick'>
+                                <i class="fa-solid fa-check" id="add-button"></i>
+                            </div>
+                        </div>
+                        <div class='ogechi-form'>
+                            <div class='ogechi-circle'>
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                            <div class='ogechi-fill'>
+                                <form>
+                                    <input type='text' placeholder='Name' name="name" id="name" required />
+                                    <input type='number' placeholder='Phone' name="phone" id="phone" required />
+                                    <input type='email' placeholder='Email' name="email" id="email" required />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="error" class="text-center mt-3"></h3>
+
+
+        <div class="dials" id="add-contact-button" id="outs">
+            <button class="dial">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
